@@ -1,0 +1,51 @@
+.quote{
+    width:100vw;
+    background-color: #f7f3e7;
+    position: relative;
+}
+.quoteContainer{
+    display: flex;
+    flex-direction: column;
+    padding: 50px;
+    align-items: center;
+    justify-content: center;
+}
+.quoteTop{
+    width: 50%;
+}
+.quoteTop > h3{
+    font-size: 30px;
+    text-align: center;
+}
+.quoteCenter{
+    width: 80%;
+}
+.quoteCenter > p{
+    margin: 15px 0;
+    font-size: 20px;
+    font-weight: 500;
+    text-align: center;
+}
+.quoteBottom{
+    width: 50%;
+    margin-top: 40px;
+    display: flex;
+    justify-content: space-between;
+}
+.quoteBottom > a{
+    color: blue;
+    font-size: 20px;
+    font-weight: 500;
+}
+
+@media screen and (max-width: 1000px) {
+    .quoteTop{
+        width: 100%;
+    }
+    .quoteContainer{
+        padding: 30px;
+    }
+    .quoteCenter{
+        width: 100%;
+    }
+}
