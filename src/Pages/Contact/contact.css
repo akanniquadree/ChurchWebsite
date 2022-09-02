@@ -1,0 +1,54 @@
+.contactContainer{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+.contactWrapper{
+    width: 70%;
+    margin-top: 40px;
+}
+.contactWrapper h1{
+    font-size: 45px;
+    font-weight: 800;
+    letter-spacing: 1px;
+    margin-bottom: 25px;
+    text-align: center;
+    text-transform: capitalize;
+}
+.contactDetails{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-top: 30px;
+}
+.contactDetail{
+    display: flex;
+    flex-direction: column;
+}
+.icon{
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background-color: #4b646F ;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 10px;
+    align-self: center;
+}
+.contactDetail h4{
+    font-size: 20px;
+    opacity: 0.8;
+    font-weight: 800;
+    letter-spacing: 3px;
+    margin-bottom: 10px;
+    text-align: center;
+    text-transform: capitalize;
+}
+.contactDetail p{
+    font-size: 15px;
+    letter-spacing: 1.5px;
+    margin-bottom: 10px;
+    text-align: center;
+    margin-bottom: 5px;
+}
