@@ -1,0 +1,166 @@
+.homeEventContainer{
+    width: 100vw;
+    margin-top: 50px;
+}
+.homeEventContainer h1{
+    font-size: 30px;
+    font-weight: 800;
+    letter-spacing: 0.7px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+.homeEventWrapper{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+.homeEventItems{
+    width: 80%;
+    display: flex;
+    flex-wrap: wrap;
+}
+.homeEventItem{
+    flex: 1 1 40%;
+    display: flex;
+    flex-direction: column;
+    margin-right: 20px;
+}
+.homeEventItem h2{
+    font-size: 20px;
+    font-weight: 800;
+    letter-spacing: 0.7px;
+    text-align: center;
+    opacity: 0.7;
+    margin-bottom: 20px;
+}
+.homeEventItemBig{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+.homeEventItemBigImg{
+    width: 500px;
+    height: 300px;
+    margin-bottom: 15px;
+}
+.homeEventItemBigImg img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.homeEventItemBig h3{
+    font-size: 20px;
+    font-weight: 800;
+    letter-spacing: 0.7px;
+    opacity: 0.7;
+    margin-bottom: 5px;
+    width: 100%;
+}
+.homeEventItemBig h5{
+    font-size: 15px;
+    font-weight: 500;
+    letter-spacing: 0.7px;
+    width: 100%;
+    opacity: 0.7;
+    margin-bottom: 5px;
+}
+.homeEventItemBig p{
+    font-size: 12px;
+    font-weight: 500;
+    letter-spacing: 0.9px;
+    white-space: nowrap;
+    opacity: 0.7;
+    width: 100%;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+.homeEventItemWrapper{
+    background-color: #eee;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+.homeEventItemDetail{
+    display: flex;
+    padding: 20px;
+}
+.homeEventItemDetailImg{
+    width: 100px;
+    height: 50px;
+    margin-right: 10px;
+}
+.homeEventItemDetailImg img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.homeEventItemDetail h3{
+    font-size: 15px;
+    font-weight: 800;
+    letter-spacing: 0.9px;
+    opacity: 0.7;
+    width: 100%;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+}
+.homeEventItemDetail h5{
+    font-size: 13px;
+    font-weight: 500;
+    letter-spacing: 0.9px;
+    white-space: nowrap;
+    opacity: 0.7;
+    width: 100%;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+
+
+
+
+
+
+
+
+
+@media screen and (max-width:1000px) {
+    .homeEventItemBigImg{
+        width: 700px;
+        height: 300px;
+        margin-bottom: 15px;
+    }
+    .homeEventItem{
+        flex: 1 1 100%;
+        margin-right: 0px;
+        margin-bottom: 20px;
+    }
+    .homeEventItemDetailImg{
+        width: 150px;
+        height: 50px;
+    }
+    .homeEventContainer h1{
+        font-size: 20px;
+    }
+    .homeEventItemBig p{
+        display: none;
+    }
+}
+
+@media screen and (max-width:768px) {
+    .homeEventItem{
+        flex: 1 1 100%;
+        margin-right: 0px;
+    }
+    .homeEventItemDetailImg{
+        width: 150px;
+        height: 50px;
+    }
+    .homeEventContainer h1{
+        font-size: 20px;
+        margin-bottom: 10px;
+    }
+    .homeEventItemBig p{
+        display: none;
+    }
+}

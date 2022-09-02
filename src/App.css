@@ -13,3 +13,42 @@ p, a,span{
 a{
   text-decoration: none;
 }
+#back-to-top {
+  position: fixed;
+  right: -150px;
+  bottom: 40px;
+  z-index: 9999;
+  width: 40px;
+  height: 40px;
+  text-align: center;
+  line-height: 40px;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  border-radius: 50%;
+  background-color: #fff;
+  -webkit-box-shadow: 0 10px 40px rgba(82, 85, 90, 0.2);
+  -moz-box-shadow: 0 10px 40px rgba(82, 85, 90, 0.2);
+  box-shadow: 0 10px 40px rgba(82, 85, 90, 0.2);
+  color: #424242;
+  font-size: 20px;
+  -webkit-transition: all 0.4s;
+  -moz-transition: all 0.4s;
+  -ms-transition: all 0.4s;
+  -o-transition: all 0.4s;
+  transition: all 0.4s;
+  cursor: pointer;
+  opacity: 0;
+  visibility: hidden;
+  border: 1px solid #ddd;
+}
+
+#back-to-top:hover {
+  background-color: #4b646f;
+  color: #fff;
+  border-color: #4b646f;
+}
+#back-to-top.back-btn-shown {
+  right: 30px;
+  opacity: 1;
+  visibility: visible;
+}

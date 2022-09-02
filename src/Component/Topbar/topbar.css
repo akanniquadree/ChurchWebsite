@@ -1,16 +1,35 @@
 .topbar{
     width: 100vw;
     height: 55px;
-    /* position: fixed; */
+    position: fixed;
     z-index: 999;
     top: 0;
+    /* background-color: #fff;
+    -webkit-box-shadow:0px 1px 16px -8px rgba(0,0,0,0.67);
+    box-shadow: 0px 0px 16px -8px rgba(0,0,0,0.67); */
 }
-.topbarContainer{
-    width: 100%;
-    height: 100%;
+.show{
+    transform: translate(0, 0px);
+    transition: all 1s;
     background-color: #fff;
     -webkit-box-shadow:0px 1px 16px -8px rgba(0,0,0,0.67);
     box-shadow: 0px 0px 16px -8px rgba(0,0,0,0.67);
+}
+.hide{
+    transform: translate(0, 0px);
+    transition: all 1s;
+     /* background-color: rgba(255, 255, 255, 0.3) */
+    /*-webkit-box-shadow:0px 1px 16px -8px rgba(0,0,0,0.67);
+    box-shadow: 0px 0px 16px -8px rgba(0,0,0,0.67); */
+}
+.hide > div > div h4 a{
+    color:#fff !important
+}
+
+
+.topbarContainer{
+    width: 100%;
+    height: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -42,15 +61,17 @@
     color: black;
 }
 .topbarList a:hover{
-    color:blue
+    color:#f9e699
 }
 .topbarAct {
     margin-bottom: -15px;
-    border-bottom: 5px solid blue;
+    border-bottom: 5px solid #f9e699;
+    transition: all 0.5s;
 }
+/* 
 .topbarAct a:hover{
     color: black !important;
-}
+} */
 .hidden{
     display: none;
 }
@@ -80,7 +101,7 @@
     .topbarRightOpen{
         display: flex;
         flex-direction: column;
-        background-color: blue !important;
+        background-color: #fff !important;
         width: 50%;
         height: 100vh;
         right: 0px;
@@ -98,6 +119,7 @@
         list-style: none;
         margin: 0;
         padding: 0;
+        align-items: center;
     }
     .topbarListOpen{
         padding: 30px;
@@ -105,10 +127,11 @@
         align-items: center;
     }
     .topbarListOpen a{
-        color: white;
+        color: black;
+        font-size: 20px;
     }
     .topbarListOpen:hover{
-        background-color: rgb(30, 30, 254);
+        background-color: rgb(214, 214, 215);
     }
     
 
@@ -121,7 +144,7 @@
     .topbarRightOpen{
         display: flex;
         flex-direction: column;
-        background-color: blue !important;
+        background-color: white !important;
         width: 50%;
         height: 100vh;
         right: 0px;
@@ -139,6 +162,7 @@
         list-style: none;
         margin: 0;
         padding: 0;
+        align-items: center;
     }
     .topbarListOpen{
         padding: 30px;
@@ -146,11 +170,11 @@
         align-items: center !important;
     }
     .topbarListOpen a{
-        color: white;
+        color: black;
         text-align: center;
     }
     .topbarListOpen:hover{
-        background-color: rgb(30, 30, 254);
+        background-color: rgb(214, 214, 215);
     }
     
 }
