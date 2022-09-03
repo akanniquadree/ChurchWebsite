@@ -7,44 +7,31 @@ export default function Footer() {
   return (
     <div className="footer">
         <div className="footerWrapper">
-            <div className="footerOne">
-                <h4>My Account</h4>
+            <div className="footerWrapperDetails align">
+               <Link to="/"><h1>RCCG</h1></Link> 
+            </div>
+            <div className="footerWrapperDetails align2">
+                <Link to="/contact"><h5>Contact us</h5></Link>
                 <ul>
-                    <li>My Account</li>
-                    <li>Login</li>
-                    <li>My Cart</li>
-                    <li>My Wishlist</li>
-                    <li>My Compare</li>
+                    <li>Sundays @ 10:00a London, UK 10, Firs Avenue, Muswell Hill</li>
+                    <li>Tel: 02 562-958</li>
+                    <li>Mobile: 02 562-95</li>
                 </ul>
             </div>
-            <div className="footerTwo">
-            <h4>My Information</h4>
+            <div className="footerWrapperDetails align2">
+                <h5>Main Link</h5>
                 <ul>
-                    <li>My Information</li>
-                    <li>Information</li>
-                    <li>Order History</li>
-                    <li>Private Policy</li>
-                    <li>Site Map</li>
+                  <li><Link to="/gallery"><span>Gallery</span></Link></li>
+                  <li><Link to="/events"><span>Events</span></Link></li>
+                  <li><Link to="/staff"><span>Our Team</span></Link></li>
                 </ul>
             </div>
-            <div className="footerThree">
-            <h4>Our Services</h4>
+            <div className="footerWrapperDetails align2">
+                <Link to="/contact"><h5>About us</h5></Link>
                 <ul>
-                    <li>Produc Recalll</li>
-                    <li>Gift Vouchers</li>
-                    <li>Return and Exchanges</li>
-                    <li>Shipping Options</li>
-                    <li>Terms of Use</li>
-                </ul>
-            </div>
-            <div className="footerFour">
-            <h4>Contact Us</h4>
-                <ul>
-                    <li>My Information</li>
-                    <li>Information</li>
-                    <li>Order History</li>
-                    <li>Private Policy</li>
-                    <li>Site Map</li>
+                    <li><Link to="/about"><span>Who are we</span></Link></li>
+                    <li><Link to="/about"><span>Mission</span></Link></li>
+                    <li><Link to="/about"><span>Vission</span></Link></li>
                 </ul>
             </div>
         </div>

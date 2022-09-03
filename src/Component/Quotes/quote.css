@@ -1,51 +1,84 @@
 .quote{
     width:100vw;
-    background-color: #f7f3e7;
+    background-color: #eee;
     position: relative;
 }
 .quoteContainer{
     display: flex;
     flex-direction: column;
-    padding: 50px;
+    padding: 20px;
     align-items: center;
     justify-content: center;
 }
 .quoteTop{
-    width: 50%;
+    width: 70%;
 }
 .quoteTop > h3{
     font-size: 30px;
     text-align: center;
+    margin: 10px 0;
 }
 .quoteCenter{
     width: 80%;
 }
 .quoteCenter > p{
-    margin: 15px 0;
+    margin: 10px 0;
     font-size: 20px;
     font-weight: 500;
     text-align: center;
 }
 .quoteBottom{
-    width: 50%;
-    margin-top: 40px;
+    width: 80%;
+    margin-top: 20px;
     display: flex;
     justify-content: space-between;
 }
-.quoteBottom > a{
-    color: blue;
+.quoteBottom button{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    border-radius: 3px;
+    background-color: #4b646f;
+    padding: 10px;
+    width: 150px;
+}
+.quoteBottom > button a{
+    color: white ;
     font-size: 20px;
     font-weight: 500;
 }
 
-@media screen and (max-width: 1000px) {
+@media screen and (max-width: 765px) {
     .quoteTop{
         width: 100%;
     }
     .quoteContainer{
-        padding: 30px;
+        padding: 20px;
     }
     .quoteCenter{
         width: 100%;
+    }
+    .quoteBottom button{
+        padding: 3px;
+        width: 120px;
+    }
+    .quoteBottom > button a{
+        font-size: 13px;
+    }
+    .quoteBottom{
+        width: 80%;
+        justify-content: space-evenly;
+    }
+    .quoteTop > h3{
+        font-size: 20px;
+        text-align: center;
+        margin: 5px 0;
+    }
+    .quoteCenter > p{
+        margin: 10px 0;
+        font-size: 15px;
+        font-weight: 500;
+        text-align: center;
     }
 }

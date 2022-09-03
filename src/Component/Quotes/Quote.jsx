@@ -1,6 +1,6 @@
 import React from 'react'
 import "./quote.css"
-
+import {Link} from "react-router-dom"
 function Quote() {
   return (
     <div className="quote">
@@ -13,9 +13,9 @@ function Quote() {
                     or oblong direction your carcass happens to be; if your soul is not down before God, you are not praying.</p>
             </div>
             <div className="quoteBottom">
-                <a href="#!">About Us</a>
-                <a href="#!">Vission and Belief</a>
-                <a href="#!">History</a>
+                <button><Link to="/about">About Us</Link></button>
+                <button style={{marginLeft:"5px"}}><Link to="/about">Mission</Link></button>
+                <button style={{marginLeft:"5px"}}><Link to="/contact">Contact Us</Link></button>
             </div>
         </div>
     </div>
