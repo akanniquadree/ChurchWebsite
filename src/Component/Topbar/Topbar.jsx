@@ -12,7 +12,7 @@ function Topbar() {
         setBurg((curr) => !curr)
     }
     const handleScroll = (e) =>{
-        if(window.scrollY > 100){
+        if(window.scrollY > 0){
             setShow(true)
         }else if (window.scrollY < 100) {
             setShow(false)
@@ -20,37 +20,9 @@ function Topbar() {
       };
     useEffect(() => { 
         window.addEventListener("scroll", handleScroll);
-        // let scrollPosition = 0;
-
-        // const pageHeight = document.body.offsetHeight;
-        // const viewportHeight = window.innerHeight;
-
-        // function handleScroll() {
-        // const newScrollPosition = window.scrollY;
-
-        // if (newScrollPosition === scrollPosition) {
-        //     return;
-        // } 
-        // if (newScrollPosition < 0 || newScrollPosition + viewportHeight > pageHeight) {
-        //     return;
-        // }
-
-        // const shouldShow = newScrollPosition < scrollPosition; 
-        // setShow(shouldShow); 
-
-        // scrollPosition = newScrollPosition; 
-        // }
-
-        // window.addEventListener('scroll', handleScroll, {passive: true});
-
-        // // ADDED
-        // return () => {
-        // window.removeEventListener('scroll', handleScroll);
-        // };
       }, []);
-
   return (
-    <div id="back" className={`topbar ${show ? "show" : "hide"}`}>
+    <div id="back" className={`topbar ${show ? "show" : ""}`}>
         <div className="topbarContainer">
             <div className="topbarLeft">
                 <h4 style={{color: !show ? "white" : "black" }}>RCCG</h4>
@@ -58,13 +30,16 @@ function Topbar() {
             <div className="topbarRight">
                 <ul className="topbarLists ">
                     <li className={`topbarList ${window.location.pathname === "/" ? "topbarAct":""}`}>
-                        <Link to="/"style={{color: !show ? "white" : "black" }}>Home</Link>
+                        <Link to="/" style={{color: !show ? "white" : "black" }}>Home</Link>
                     </li>
                     <li className={`topbarList ${window.location.pathname.startsWith("/events") ? "topbarAct":"none"}`}>
                         <Link to="/events" style={{color: !show ? "white" : "black" }}>Events</Link>
                     </li>
                     <li className={`topbarList ${window.location.pathname === "/staff" ? "topbarAct":""}`}>
                         <Link to="/staff" style={{color: !show ? "white" : "black" }}>Our Team</Link>
+                    </li>
+                    <li className={`topbarList ${window.location.pathname === "/gallery" ? "topbarAct":""}`}>
+                        <Link to="/gallery" style={{color: !show ? "white" : "black" }}>Gallery</Link>
                     </li>
                     <li className={`topbarList ${window.location.pathname === "/about" ? "topbarAct":""}`}>
                         <Link to="/about" style={{color: !show ? "white" : "black" }}>About us</Link>
@@ -85,19 +60,22 @@ function Topbar() {
         <div className="topbarRightOpen">
                 <ul className="topbarListsOpen ">
                     <li className="topbarListOpen">
-                        <Link to="#!">Home</Link>
+                        <Link to="/">Home</Link>
                     </li>
                     <li className="topbarListOpen">
-                        <Link to="#!">Events</Link>
+                        <Link to="/events">Events</Link>
                     </li>
                     <li className="topbarListOpen">
-                        <Link to="#!">Our Team</Link>
+                        <Link to="/staff">Our Team</Link>
                     </li>
                     <li className="topbarListOpen">
-                        <Link to="#!">About us</Link>
+                        <Link to="/gallery">Gallery</Link>
                     </li>
                     <li className="topbarListOpen">
-                        <Link to="#!">Contact us</Link>
+                        <Link to="/about">About us</Link>
+                    </li>
+                    <li className="topbarListOpen">
+                        <Link to="/contact">Contact us</Link>
                     </li>
                 </ul>
             </div>

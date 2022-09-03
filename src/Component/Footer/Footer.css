@@ -12,12 +12,14 @@
 }
 .footerWrapper{
     background-color: #2f2e2e;
-    width: 87%;
+    width: 80%;
     height: 100%;
     display: flex;
     flex-wrap: wrap;
+    
 }
 .footerOne{
+    margin-top: 20px;
     flex: 1;
     display: flex;
     margin-right: 5px;
@@ -42,6 +44,7 @@
     font-size: 14px;
 }
 .footerTwo{
+    margin-top: 20px;
     flex: 1;
     display: flex;
     margin-right: 5px;
@@ -66,6 +69,7 @@
     font-size: 14px;
 }
 .footerThree{
+    margin-top: 20px;
     flex: 1;
     display: flex;
     margin-right: 5px;
@@ -91,6 +95,7 @@
     margin-left: 35px;
 }
 .footerFour{
+    margin-top: 20px;
     flex: 1;
     margin-right: 5px;
     display: flex;

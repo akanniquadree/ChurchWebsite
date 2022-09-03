@@ -52,3 +52,284 @@
 .sliactive{
     background: rgb(32, 32, 32);
 }
+
+
+
+
+.slideDetails{
+    top: 170px;
+    left: 781px;
+    position: absolute;
+    background-color: rebeccapurple;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    
+
+}
+.hiide{
+    display: none;
+}
+.headOne{
+    text-transform: uppercase;
+    width: 400px;
+    font-size: 45px;
+    color: rgb(255, 255, 255);
+    margin: 5px;
+    text-align: center;
+}
+.paraOne{
+    width: 400px;
+    font-size: 25px;
+    line-height: 30px;
+    color: rgb(255, 255, 255);
+}
+.auth{
+    color: rgb(255, 7, 7);
+    font-size: 20px;
+    font-weight: 400;
+    align-self: center !important;
+}
+
+
+.slideDetailsTwo{
+    top: 160px;
+    left: 271px;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.headTwo{
+    text-transform: uppercase;
+    font-size: 50px;
+    color: rgb(255, 255, 255);
+    margin: 10px;
+    text-align: center;
+    animation: slideLeft 0.9s linear;
+}
+.paraTwo{
+    font-size: 30px;
+    line-height: 30px;
+    color: rgb(255, 255, 255);
+    font-weight: 600;
+    animation: slideRight 0.9s linear;
+}
+
+
+.slideDetailsThree{
+    bottom: 126px;
+    left: 147px;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 400px;
+}
+.headThree{
+    text-transform: uppercase;
+    font-size: 30px;
+    color: rgb(255, 255, 255);
+    margin: 4px;
+    text-align: center;
+    animation: slideLeft 0.9s linear;
+}
+.paraThree{
+    font-size: 20px;
+    line-height: 30px;
+    color: rgb(255, 255, 255);
+    font-weight: 600;
+    animation: slideRight 0.9s linear;
+    text-align: center;
+}
+
+
+@media screen and (max-width: 1000px) {
+    .sliderContainer{
+        width: 100vw;
+        height: 300px;
+    }
+    .slideDetails{
+        top: 141px;
+        left: 160px;
+        padding: 10px;
+    }
+    .headOne{
+        text-transform: uppercase;
+        width: 128px;
+        font-size: 13px;
+        line-height: 10.0174px;
+    }
+    .paraOne{
+        width: 134px;
+        font-size: 10px;
+        line-height: 11px;
+        text-align: center;
+    }
+    .auth{
+        font-size: 15px;
+    }
+
+
+    .slideDetailsTwo{
+        top: 81px;
+        left: 135px;
+    }
+    .headTwo{
+        font-size: 30px;
+    }
+    .paraTwo{
+        font-size: 20px;
+    }
+
+    .slideDetailsThree{
+        bottom: 71px;
+        left: 164px;
+        width: 450px;
+    }
+    .headThree{
+        font-size: 30px;
+    }
+    .paraThree{
+        font-size: 20px;
+        line-height: 30px;
+    }
+}
+@media screen and (max-width: 765px) {
+    .sliderContainer{
+        width: 100vw;
+        height: 300px;
+    }
+    .slideDetails{
+        top: 141px;
+        left: 160px;
+        padding: 10px;
+    }
+    .headOne{
+        text-transform: uppercase;
+        width: 128px;
+        font-size: 13px;
+        line-height: 10.0174px;
+    }
+    .paraOne{
+        width: 134px;
+        font-size: 10px;
+        line-height: 11px;
+        text-align: center;
+    }
+    .auth{
+        font-size: 15px;
+    }
+
+
+    .slideDetailsTwo{
+        top: 81px;
+        left: 14px;
+    }
+    .headTwo{
+        font-size: 30px;
+    }
+    .paraTwo{
+        font-size: 15px;
+    }
+
+    .slideDetailsThree{
+        bottom: 124px;
+        left: 49px;
+        width: 263px;
+    }
+    .headThree{
+        font-size: 20px;
+    }
+    .paraThree{
+        font-size: 14px;
+        line-height: 14px;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@keyframes slideDown {
+    0% {
+      opacity: 0;
+      transform: translateY(-45%);
+    }
+    25% {
+      opacity: 0.25;
+      transform: translateY(-25%);
+    }
+    50% {
+      opacity: 0.5;
+      transform: translateY(-10%);
+    }
+    75% {
+      opacity: 0.75;
+      transform: translateY(-5%);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(-2%);
+    }
+  }
+
+@keyframes slideLeft {
+    0% {
+      opacity: 0;
+      transform: translateX(-45%);
+    }
+    25% {
+      opacity: 0.25;
+      transform: translateX(-25%);
+    }
+    50% {
+      opacity: 0.5;
+      transform: translateX(-10%);
+    }
+    75% {
+      opacity: 0.75;
+      transform: translateX(-5%);
+    }
+    100% {
+      opacity: 1;
+      transform: translateX(-2%);
+    }
+  }
+
+@keyframes slideRight {
+    0% {
+      opacity: 0;
+      transform: translateX(45%);
+    }
+    25% {
+      opacity: 0.25;
+      transform: translateX(25%);
+    }
+    50% {
+      opacity: 0.5;
+      transform: translateX(10%);
+    }
+    75% {
+      opacity: 0.75;
+      transform: translateX(5%);
+    }
+    100% {
+      opacity: 1;
+      transform: translateX(2%);
+    }
+  }

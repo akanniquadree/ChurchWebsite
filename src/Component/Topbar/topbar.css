@@ -4,26 +4,20 @@
     position: fixed;
     z-index: 999;
     top: 0;
-    /* background-color: #fff;
-    -webkit-box-shadow:0px 1px 16px -8px rgba(0,0,0,0.67);
-    box-shadow: 0px 0px 16px -8px rgba(0,0,0,0.67); */
+    transition: all 0.5s;
 }
 .show{
     transform: translate(0, 0px);
-    transition: all 1s;
+    transition: all 0.5s;
     background-color: #fff;
     -webkit-box-shadow:0px 1px 16px -8px rgba(0,0,0,0.67);
     box-shadow: 0px 0px 16px -8px rgba(0,0,0,0.67);
 }
-.hide{
-    transform: translate(0, 0px);
-    transition: all 1s;
-     /* background-color: rgba(255, 255, 255, 0.3) */
-    /*-webkit-box-shadow:0px 1px 16px -8px rgba(0,0,0,0.67);
-    box-shadow: 0px 0px 16px -8px rgba(0,0,0,0.67); */
+.topbar a{
+    color: #fff ;
 }
-.hide > div > div h4 a{
-    color:#fff !important
+.show a{
+    color: black !important;
 }
 
 

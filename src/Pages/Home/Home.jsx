@@ -1,6 +1,7 @@
 import React from 'react'
 import Footer from '../../Component/Footer/Footer'
 import HomeEvent from '../../Component/HomeEvent/HomeEvent'
+import HomeGallery from '../../Component/HomeEvent/HomeGallery'
 import HomeTeam from '../../Component/HomeEvent/HomeTeam'
 import Quote from '../../Component/Quotes/Quote'
 import Slider from '../../Component/Slider/Slider'
@@ -14,6 +15,7 @@ export default function Home() {
         <Quote/>
         <HomeEvent/>
         <HomeTeam/>
+        <HomeGallery/>
         <Footer/>
     </>
   )
