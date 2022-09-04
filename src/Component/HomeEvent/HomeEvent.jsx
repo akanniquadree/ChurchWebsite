@@ -1,5 +1,7 @@
 import React from 'react'
 import "./homeEvent.css"
+import Button from '@mui/material/Button';
+import {Link} from "react-router-dom"
 
 export default function HomeEvent() {
   return (
@@ -57,6 +59,7 @@ export default function HomeEvent() {
                                 <h5>September 5, 2022 @ 10:00 am - September 1, 2026 @ 11:30 pm</h5>
                             </div>
                         </div>
+                        <Button sx={{':hover': {bgcolor: '#678998'},backgroundColor:"#4b646f", marginBottom:"10px", alignSelf:"center", width:"120px"}}><Link to="/events" style={{fontWeight:600,color:"white", fontSize:"15px"}}>View More</Link></Button>
                     </div>
                 </div>
             </div>

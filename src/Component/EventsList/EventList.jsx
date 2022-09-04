@@ -3,8 +3,8 @@ import Topbar from '../Topbar/Topbar'
 import "./eventList.css"
 import {Link} from "react-router-dom"
 import { Search } from '@material-ui/icons'
-// import Pagination from '@mui/material/Pagination';
-// import Stack from '@mui/material/Stack';
+import Pagination from '@mui/material/Pagination';
+import Stack from '@mui/material/Stack';
 
 function EventList() {
   return (
@@ -18,17 +18,18 @@ function EventList() {
                     <p>Upcoming Event</p>
                 </div>
             </div>
-            <div className="eventListsearch">
+            <div className="eventListsearch" >
                 <div className="eventListsearchWrapper">
                     <Search htmlColor="#f9e699" size={20} style={{fontWeight:800}}/>
                     <input type="search" placeholder='Search for an Event'/>
                 </div>
-               {/* <div className="eventListPadination">
-                  <Stack spacing={2}>
-                    <Pagination count={10} shape="rounded" />
-                    <Pagination count={10} variant="outlined" shape="rounded" />
-                </Stack>  
-                </div>*/}
+            </div>
+            <div className="eventListsearch" style={{marginTop:" 30px"}}>
+                <div className="eventListPadination">
+                    <Stack spacing={2}>
+                        <Pagination count={10} variant="outlined" shape="rounded" />
+                    </Stack>  
+                </div>
             </div>
 
             <div className="eventListsearch">

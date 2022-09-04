@@ -46,7 +46,7 @@ export default function Slider() {
             setSlideIndex(1)
           }
         }
-        timeout.current = setTimeout(nextSlide, 300000)
+        timeout.current = setTimeout(nextSlide, 30000)
         return function (){
           if(timeout.current){
             clearTimeout(timeout.current)

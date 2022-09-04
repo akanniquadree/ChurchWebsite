@@ -32,7 +32,7 @@ function Topbar() {
                     <li className={`topbarList ${window.location.pathname === "/" ? "topbarAct":""}`}>
                         <Link to="/" style={{color: !show ? "white" : "black" }}>Home</Link>
                     </li>
-                    <li className={`topbarList ${window.location.pathname.startsWith("/events") ? "topbarAct":"none"}`}>
+                    <li className={`topbarList ${window.location.pathname.includes("/even") ? "topbarAct":"none"}`}>
                         <Link to="/events" style={{color: !show ? "white" : "black" }}>Events</Link>
                     </li>
                     <li className={`topbarList ${window.location.pathname === "/staff" ? "topbarAct":""}`}>
@@ -49,7 +49,7 @@ function Topbar() {
                     </li>
                     <li className="hidden burger" onClick={()=>OpenNav()}>
                         {
-                            burg ? <Close style={{color: !show ? "white" : "black" }} /> : <Menu  style={{color: !show ? "white" : "black" }}/>
+                            burg ? <Close style={{color: !show ? "white" : "black" ,transition:"all 0.5 ease"}} /> : <Menu  style={{color: !show ? "white" : "black", transition:"all 0.5 ease" }}/>
                         }
                        
                     </li>
