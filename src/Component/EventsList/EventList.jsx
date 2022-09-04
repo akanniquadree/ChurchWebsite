@@ -1,12 +1,27 @@
-import React from 'react'
+import React, { useState } from 'react'
 import Topbar from '../Topbar/Topbar'
 import "./eventList.css"
 import {Link} from "react-router-dom"
 import { Search } from '@material-ui/icons'
 import Pagination from '@mui/material/Pagination';
 import Stack from '@mui/material/Stack';
+import { useMediaQuery } from '@mui/material'
+import { EventL } from './EventListData'
+import usePagination from './Pagination'
+
 
 function EventList() {
+    const matches = useMediaQuery('(max-width:600px)')
+    const [search, setSearch] = useState("")
+    const [page, setPage] = useState(1)
+    const PER_PAGE = 1;
+    const count = Math.ceil(EventL.length / PER_PAGE);
+    const _DATA = usePagination(EventL, PER_PAGE, search);
+    const handleChangePage = (event, newPage) => {
+        setPage(newPage)
+        _DATA.jump(newPage);
+    }
+
   return (
     <>
         <Topbar/>
@@ -21,156 +36,54 @@ function EventList() {
             <div className="eventListsearch" >
                 <div className="eventListsearchWrapper">
                     <Search htmlColor="#f9e699" size={20} style={{fontWeight:800}}/>
-                    <input type="search" placeholder='Search for an Event'/>
+                    <input type="search" placeholder='Search for an Event, Date, Month or Venue' value={search} onChange={(e)=>{setSearch(e.target.value)}}/>
                 </div>
             </div>
             <div className="eventListsearch" style={{marginTop:" 30px"}}>
                 <div className="eventListPadination">
-                    <Stack spacing={2}>
-                        <Pagination count={10} variant="outlined" shape="rounded" />
+                    <Stack spacing={matches ? 1 :2}>
+                        <Pagination
+                        page={page}
+                        onChange={handleChangePage}
+                        boundaryCount={matches ? 1 : 3} 
+                        count={count} variant="outlined" shape="rounded" />
                     </Stack>  
                 </div>
             </div>
+            {
+              _DATA.currentData().map((itm, index)=>(
+                    <React.Fragment key={index}>
+                            <div className="eventListsearch">
+                                <div className="eventListDate">
+                                    <span>{itm.date}</span>
+                                    <hr/>
+                                </div>
+                            </div>
+                            <div className="eventLists">
+                                <div className="eventListsWrapper">
+                                    <div className="eventListsLeft">
+                                        <h6>Mon</h6>
+                                        <p>9</p>
+                                    </div>
+                                    <div className="eventListsCenter">
+                                        <h5>{itm.eventDate}</h5>
+                                        <Link to={`/event/${index}`}><h1>{itm.heading}</h1></Link>
+                                        <h6>{itm.venue}</h6>
+                                        <p>{itm.para}</p>
+                                    </div>
+                                    <div className="eventListsRight">
+                                        <Link to="">
+                                            <div className="eventListsImage">
+                                                <img src={itm.img} alt="" />
+                                            </div>
+                                        </Link>
+                                    </div>
+                                </div>
+                            </div>
 
-            <div className="eventListsearch">
-                <div className="eventListDate">
-                    <span>02 September 2020</span>
-                    <hr/>
-                </div>
-            </div>
-            <div className="eventLists">
-                <div className="eventListsWrapper">
-                    <div className="eventListsLeft">
-                        <h6>Mon</h6>
-                        <p>9</p>
-                    </div>
-                    <div className="eventListsCenter">
-                        <h5>September 5, 2022 @ 10:00 am - September 1, 2026 @ 11:30 pm</h5>
-                        <Link to=""><h1>College & Young Adults – The Journey Worship </h1></Link>
-                        <h6>Our Church 123, New Lenox, Chicago, IL</h6>
-                        <p>Voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis</p>
-                    </div>
-                    <div className="eventListsRight">
-                        <Link to="">
-                            <div className="eventListsImage">
-                                <img src="/Images/omotunde.jpg" alt="" />
-                            </div>
-                        </Link>
-                    </div>
-                </div>
-            </div>
-
-             <div className="eventListsearch">
-                <div className="eventListDate">
-                    <span>02 September 2020</span>
-                    <hr/>
-                </div>
-            </div>
-            <div className="eventLists">
-                <div className="eventListsWrapper">
-                    <div className="eventListsLeft">
-                        <h6>Mon</h6>
-                        <p>9</p>
-                    </div>
-                    <div className="eventListsCenter">
-                        <h5>September 5, 2022 @ 10:00 am - September 1, 2026 @ 11:30 pm</h5>
-                        <Link to=""><h1>College & Young Adults – The Journey Worship </h1></Link>
-                        <h6>Our Church 123, New Lenox, Chicago, IL</h6>
-                        <p>Voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis</p>
-                    </div>
-                    <div className="eventListsRight">
-                        <Link to="">
-                            <div className="eventListsImage">
-                                <img src="/Images/omotunde.jpg" alt="" />
-                            </div>
-                        </Link>
-                    </div>
-                </div>
-            </div>
-            
-            <div className="eventListsearch">
-                <div className="eventListDate">
-                    <span>02 September 2020</span>
-                    <hr/>
-                </div>
-            </div>
-            <div className="eventLists">
-                <div className="eventListsWrapper">
-                    <div className="eventListsLeft">
-                        <h6>Mon</h6>
-                        <p>9</p>
-                    </div>
-                    <div className="eventListsCenter">
-                        <h5>September 5, 2022 @ 10:00 am - September 1, 2026 @ 11:30 pm</h5>
-                        <Link to=""><h1>College & Young Adults – The Journey Worship </h1></Link>
-                        <h6>Our Church 123, New Lenox, Chicago, IL</h6>
-                        <p>Voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis</p>
-                    </div>
-                    <div className="eventListsRight">
-                        <Link to="">
-                            <div className="eventListsImage">
-                                <img src="/Images/omotunde.jpg" alt="" />
-                            </div>
-                        </Link>
-                    </div>
-                </div>
-            </div>
-
-            <div className="eventListsearch">
-                <div className="eventListDate">
-                    <span>02 September 2020</span>
-                    <hr/>
-                </div>
-            </div>
-            <div className="eventLists">
-                <div className="eventListsWrapper">
-                    <div className="eventListsLeft">
-                        <h6>Mon</h6>
-                        <p>9</p>
-                    </div>
-                    <div className="eventListsCenter">
-                        <h5>September 5, 2022 @ 10:00 am - September 1, 2026 @ 11:30 pm</h5>
-                        <Link to=""><h1>College & Young Adults – The Journey Worship </h1></Link>
-                        <h6>Our Church 123, New Lenox, Chicago, IL</h6>
-                        <p>Voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis</p>
-                    </div>
-                    <div className="eventListsRight">
-                        <Link to="">
-                            <div className="eventListsImage">
-                                <img src="/Images/omotunde.jpg" alt="" />
-                            </div>
-                        </Link>
-                    </div>
-                </div>
-            </div>
-
-            <div className="eventListsearch">
-                <div className="eventListDate">
-                    <span>02 September 2020</span>
-                    <hr/>
-                </div>
-            </div>
-            <div className="eventLists">
-                <div className="eventListsWrapper">
-                    <div className="eventListsLeft">
-                        <h6>Mon</h6>
-                        <p>9</p>
-                    </div>
-                    <div className="eventListsCenter">
-                        <h5>September 5, 2022 @ 10:00 am - September 1, 2026 @ 11:30 pm</h5>
-                        <Link to=""><h1>College & Young Adults – The Journey Worship </h1></Link>
-                        <h6>Our Church 123, New Lenox, Chicago, IL</h6>
-                        <p>Voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis</p>
-                    </div>
-                    <div className="eventListsRight">
-                        <Link to="">
-                            <div className="eventListsImage">
-                                <img src="/Images/omotunde.jpg" alt="" />
-                            </div>
-                        </Link>
-                    </div>
-                </div>
-            </div>
+                    </React.Fragment>
+                ))
+            }
         </div>
     </>
   )

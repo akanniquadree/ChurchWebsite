@@ -1,15 +1,21 @@
-import React from 'react'
+import React, { useRef } from 'react'
 import "./homeEvent.css"
 import Button from '@mui/material/Button';
 import {Link} from "react-router-dom"
 
 export default function HomeEvent() {
+    const BoxOne = useRef(null)
+    const BoxTwo = useRef(null)
+    const animation = ()=>{
+        const animBox = BoxOne.value.current
+        const triggerBottom = window.innerHeight / 5 * 4
+    }
   return (
     <div className="homeEventContainer">
         <h1> Upcomming Events</h1>
         <div className="homeEventWrapper">
             <div className="homeEventItems">
-                <div className="homeEventItem">
+                <div className="homeEventItem" ref={BoxOne}>
                     <h2>Latest Event</h2>
                     <div className="homeEventItemBig">
                         <div className="homeEventItemBigImg">
@@ -20,7 +26,7 @@ export default function HomeEvent() {
                         <p>Voluptatem accusantium ;kljhggjhfghvhgvhvgvv nhjgfds hghbhhhjhjkhkhkjkjjkjkjkjjkjk doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis</p>
                     </div>
                 </div>
-                <div className="homeEventItem">
+                <div className="homeEventItem" ref={BoxTwo}>
                     <h2>Recent Events</h2>
                     <div className="homeEventItemWrapper">
                         <div className="homeEventItemDetail">

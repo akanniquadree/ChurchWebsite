@@ -286,12 +286,19 @@
     }
     .eventLists{
     margin-top: 20px;
-}
+    }
+    .eventListPadination{
+        width: 80%;
+    }
 }
 
 @media screen and (max-width:768px) {
     .eventListTop h1{
         font-size: 2.8em;
+    }
+    .eventListPadination{
+        width: 100%;
+        margin-left: 7px
     }
     .eventListsearchWrapper input{
         width: 90%;

@@ -1,5 +1,7 @@
 import React from 'react'
 import "./homeTeam.css"
+import Button from '@mui/material/Button';
+import {Link} from "react-router-dom"
 
 export default function HomeTeam() {
   return (
@@ -23,6 +25,7 @@ export default function HomeTeam() {
                     </p>   
 
                      <span> — Richard James Molloy</span>  
+                     <Button sx={{':hover': {bgcolor: '#678998'},backgroundColor:"#4b646f", marginTop:"15px", alignSelf:"center", width:"120px"}}><Link to="/staff" style={{fontWeight:600,color:"white", fontSize:"15px"}}>View More</Link></Button>
                 </div>
                 <div className="homeTeamItems">
                     <div className="homeTeamItems">
@@ -32,6 +35,7 @@ export default function HomeTeam() {
                             <h4>Chief Pastor</h4>
                     </div>
                 </div>
+               
             </div>
         </div>
      </div>
