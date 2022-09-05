@@ -15,7 +15,7 @@ export default function Pastor() {
         Aos.init({offset: 100,duration: 1000,})
        },[])
   return (
-                <div className="staffListwrapperTwo" data-aos="slide-down">
+                <div className="staffListwrapperTwo" data-aos="slide-left">
                     <Card sx={{ maxWidth: matches ?300: 200, marginTop:"15px" }}>
                         <CardActionArea>
                             <CardMedia
