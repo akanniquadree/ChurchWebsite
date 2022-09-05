@@ -8,6 +8,7 @@ import Stack from '@mui/material/Stack';
 import { useMediaQuery } from '@mui/material'
 import { EventL } from './EventListData'
 import usePagination from './Pagination'
+import Footer from '../Footer/Footer'
 
 
 function EventList() {
@@ -85,6 +86,7 @@ function EventList() {
                 ))
             }
         </div>
+        <Footer/>
     </>
   )
 }

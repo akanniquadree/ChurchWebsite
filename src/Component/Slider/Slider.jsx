@@ -3,6 +3,8 @@ import React, { useEffect, useRef } from 'react'
 import { useState } from 'react'
 import { Slide } from './Slide'
 import {Link} from "react-router-dom"
+import Aos from "aos"
+import "aos/dist/aos.css"
 
 import "./slider.css"
 
@@ -39,6 +41,7 @@ export default function Slider() {
         setSlideIndex(index)
     }
     useEffect(()=>{
+      Aos.init({offset: 100,duration: 1000,})
         const nextSlide = () =>{
           if(slideIndex !== Slide.length){
             setSlideIndex(slideIndex + 1)
@@ -62,7 +65,7 @@ export default function Slider() {
                 Slide.map((item, indx)=>(
                     <div className={`${slideIndex === indx + 1 ? "slide active-anim" : "slide"}`} key={indx}>
                         <img src={item.image} alt=""  />
-                        <div className={`${indx === 0  ? "slideDetails":"hiide"}`}>
+                        <div className={`${indx === 0  ? "slideDetails":"hiide"}`} data-aos="slide-down">
                           <h4 className='headOne'>{item.heading}</h4>
                           <p className="paraOne">{item.para}</p>
                           <span className="auth">{item.auth}</span>
@@ -71,7 +74,7 @@ export default function Slider() {
                           <h4 className='headTwo'>{item.heading}</h4>
                           <p className="paraTwo">{item.para}</p>
                         </div>
-                        <div className={`${indx === 2 ? "slideDetailsThree":"hiide"}`}>
+                        <div className={`${indx === 2 ? "slideDetailsThree":"hiide"}`} data-aos="slide-down">
                           <h4 className='headThree'>{item.heading}</h4>
                           <p className="paraThree">{item.para}</p>
                         </div>

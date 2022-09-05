@@ -3,6 +3,7 @@ import Topbar from '../../Component/Topbar/Topbar'
 import {Link} from "react-router-dom"
 import "./about.css"
 import Priest from '../../Component/Priests/Priest'
+import Footer from '../../Component/Footer/Footer'
 
 export default function About() {
   return (
@@ -62,6 +63,7 @@ export default function About() {
                 </div>
             </div>
         </div>
+        <Footer/>
     </>
   )
 }

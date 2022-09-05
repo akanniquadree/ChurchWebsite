@@ -3,6 +3,7 @@ import Topbar from '../../Component/Topbar/Topbar'
 import "./staff.css"
 import {Link} from "react-router-dom"
 import Priest from '../../Component/Priests/Priest'
+import Footer from '../../Component/Footer/Footer'
 
 
 export default function Staff() {
@@ -78,6 +79,7 @@ export default function Staff() {
                 </div>
             </div>
         </div>
+        <Footer/>
     </>
   )
 }

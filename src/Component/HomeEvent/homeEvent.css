@@ -114,6 +114,21 @@
     text-overflow: ellipsis;
     overflow: hidden;
 }
+/* .BoxOne{
+    transform: translate(400%);
+    transition: transform 0.5s ease-in-out;
+} */
+
+/* Animation */
+.BoxOne[data-scroll="in"]{
+    transform: translate(0%);
+    transition: transform 0.5s ease-in-out;
+}
+
+
+
+
+
 
 
 

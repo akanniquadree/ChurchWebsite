@@ -5,6 +5,7 @@ import Topbar from '../../Component/Topbar/Topbar';
 import {Link} from "react-router-dom"
 import Lightbox from "react-image-lightbox"
 import "react-image-lightbox/style.css"
+import Footer from '../../Component/Footer/Footer';
 
 function srcset(image, size, rows = 1, cols = 1) {
   return {
@@ -67,6 +68,7 @@ export default function Gallery() {
                     </div>
                   </div>
               </div>
+              <Footer/>
     </>
   );
 }

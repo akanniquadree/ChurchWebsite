@@ -102,7 +102,7 @@
         right: 0px;
         top: 55px;
         position: sticky;
-        transform: translateX(100%);
+        transform: translateX(200%);
 		transition: transform 0.5s ease-in;
         z-index: 998;
     }

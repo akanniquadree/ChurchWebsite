@@ -3,6 +3,7 @@ import React from 'react'
 import {Link} from "react-router-dom"
 import Topbar from "../../Component/Topbar/Topbar"
 import { AccessTime, Home, Phone } from "@material-ui/icons"
+import Footer from "../../Component/Footer/Footer"
 
 
 
@@ -52,6 +53,7 @@ function Contact() {
                 </div>
             </div>
         </div>
+        <Footer/>
     </>
   )
 }

@@ -1,10 +1,12 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import Paper from '@mui/material/Paper';
 import Stack from '@mui/material/Stack';
 import { styled } from '@mui/material/styles';
 import {Link} from "react-router-dom"
 import ImageListItem from '@mui/material/ImageListItem';
 import { Box, ImageList, useMediaQuery } from '@mui/material';
+import Aos from "aos"
+import "aos/dist/aos.css"
 
 const Item = styled(Paper)(({ theme }) => ({
   backgroundColor: theme.palette.mode === 'dark' ? '#1A2027' : '#fff',
@@ -19,6 +21,9 @@ const Item = styled(Paper)(({ theme }) => ({
 
 export default function HomeGallery() {
     const matches = useMediaQuery('(max-width:600px)')
+    useEffect(()=>{
+      Aos.init({offset: 100,duration: 1000,})
+     },[])
   return (
     <div className="homeEventContainer" style={{marginBottom:"40px"}}>
         <h1 style={{paddingTop:"50px",padddingBottom:"50px"}}> From Our Gallery</h1>
@@ -34,6 +39,7 @@ export default function HomeGallery() {
                         alt={item.title}
                         loading="lazy"
                         className="imag"
+                        data-aos="flip-down"
                         />
                         <h5 className='dont'>View More</h5>
                     </Link>
