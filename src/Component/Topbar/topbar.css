@@ -102,12 +102,12 @@
         right: 0px;
         top: 55px;
         position: sticky;
-        transform: translateX(200%);
+        transform: translateX(250%);
 		transition: transform 0.5s ease-in;
         z-index: 998;
     }
     .topbarRightOpen-active{
-        transform: translateX(0%);
+        transform: translateX(100%);
     }
     .topbarListsOpen{
         display: flex;

@@ -5,11 +5,17 @@ import Card from '@mui/material/Card';
 import CardActions from '@mui/material/CardActions';
 import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
+import Aos from "aos"
+import "aos/dist/aos.css"
+import {useEffect} from "react"
 
 export default function Pastor() {
     const matches = useMediaQuery("(max-width:600px)")
+    useEffect(()=>{
+        Aos.init({offset: 100,duration: 1000,})
+       },[])
   return (
-                <div className="staffListwrapperTwo">
+                <div className="staffListwrapperTwo" data-aos="slide-down">
                     <Card sx={{ maxWidth: matches ?300: 200, marginTop:"15px" }}>
                         <CardActionArea>
                             <CardMedia

@@ -15,7 +15,7 @@ function EventList() {
     const matches = useMediaQuery('(max-width:600px)')
     const [search, setSearch] = useState("")
     const [page, setPage] = useState(1)
-    const PER_PAGE = 1;
+    const PER_PAGE = 10;
     const count = Math.ceil(EventL.length / PER_PAGE);
     const _DATA = usePagination(EventL, PER_PAGE, search);
     const handleChangePage = (event, newPage) => {

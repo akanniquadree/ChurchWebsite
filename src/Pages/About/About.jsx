@@ -1,32 +1,37 @@
-import React from 'react'
+import React, {useEffect} from 'react'
 import Topbar from '../../Component/Topbar/Topbar'
 import {Link} from "react-router-dom"
 import "./about.css"
 import Priest from '../../Component/Priests/Priest'
 import Footer from '../../Component/Footer/Footer'
+import Aos from "aos"
+import "aos/dist/aos.css"
 
 export default function About() {
+    useEffect(()=>{
+        Aos.init({offset: 100,duration: 1000,})
+       },[])
   return (
     <>
         <Topbar/>
         <div className="eventList">
             <div className="eventListTop">
                 <h1>About us</h1>
-                <div style={{display:"flex", marginTop:"15px", justifyContent:"center"}}>
+                <div style={{display:"flex", marginTop:"15px", justifyContent:"center"}} >
                     <Link to="/" className="lik">Home</Link>
                     <p>About us</p>
                 </div>
             </div>
             <div className="aboutContainer">
                 <div className="aboutContainerWrapper">
-                    <div className="aboutContainerRight">
+                    <div className="aboutContainerRight" data-aos="slide-left">
                         <h4>Welcome to Our World</h4>
                         <p>Whatever your age or life story, you are welcome! Our mission is simple: People are our heart and Jesus is our message.
                             Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
                             Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.
                         </p>
                     </div>
-                    <div className="aboutContainerLeft">
+                    <div className="aboutContainerLeft" data-aos="zoom-in">
                         <div className="aboutContainerLeftImage">
                             <img src="/Images/omotunde.jpg" alt="" />
                         </div>
@@ -36,12 +41,12 @@ export default function About() {
 
             <div className="aboutContainer">
                 <div className="aboutContainerWrapper" style={{backgroundColor:"#eee"}}>
-                    <div className="aboutContainerLeft" style={{justifyContent:"flex-end"}}>
+                    <div className="aboutContainerLeft" style={{justifyContent:"flex-end"}} data-aos="slide-up">
                         <div className="aboutContainerLeftImage">
                             <img src="/Images/omotunde.jpg" alt="" />
                         </div>
                     </div>
-                    <div className="aboutContainerRight">
+                    <div className="aboutContainerRight" data-aos="slide-left">
                         <h4>Our Mission</h4>
                         <p>
                             Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts…
