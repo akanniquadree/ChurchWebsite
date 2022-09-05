@@ -58,9 +58,7 @@ export default function About() {
             </div>
 
             <div className="aboutContainer">
-                <div className="aboutContainerWrapper">
                     <Priest about/>
-                </div>
             </div>
         </div>
         <Footer/>

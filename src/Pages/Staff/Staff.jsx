@@ -4,6 +4,7 @@ import "./staff.css"
 import {Link} from "react-router-dom"
 import Priest from '../../Component/Priests/Priest'
 import Footer from '../../Component/Footer/Footer'
+import Pastor from '../../Component/Priests/Pastors'
 
 
 export default function Staff() {
@@ -24,59 +25,7 @@ export default function Staff() {
                     <h3>Church Workers</h3>
                     <hr style={{marginBottom:"40px"}}/>
                 </div>
-                <div className="staffListwrapperTwo">
-                    <div className="staffListLeft">
-                        <div className="staffListImgTwo">
-                            <img src="/Images/omotunde.jpg" alt="" />
-                        </div>
-                        <div>
-                            <h4>Rodney Stratton</h4>
-                            <h5>Priest</h5>
-                            <p>09098746464674</p>
-                        </div>
-                    </div>
-                    <div className="staffListLeft">
-                        <div className="staffListImgTwo">
-                            <img src="/Images/omotunde.jpg" alt="" />
-                        </div>
-                        <div>
-                            <h4>Rodney Stratton</h4>
-                            <h5>Priest</h5>
-                            <p>09098746464674</p>
-                        </div>
-                    </div>
-                    <div className="staffListLeft">
-                        <div className="staffListImgTwo">
-                            <img src="/Images/omotunde.jpg" alt="" />
-                        </div>
-                        <div>
-                            <h4>Rodney Stratton</h4>
-                            <h5>Priest</h5>
-                            <p>09098746464674</p>
-                        </div>
-                    </div>
-                    <div className="staffListLeft">
-                        <div className="staffListImgTwo">
-                            <img src="/Images/omotunde.jpg" alt="" />
-                        </div>
-                        <div>
-                            <h4>Rodney Stratton</h4>
-                            <h5>Priest</h5>
-                            <p>09098746464674</p>
-                        </div>
-                    </div>
-                    <div className="staffListLeft">
-                        <div className="staffListImgTwo">
-                            <img src="/Images/omotunde.jpg" alt="" />
-                        </div>
-                        <div>
-                            <h4>Rodney Stratton</h4>
-                            <h5>Priest</h5>
-                            <p>09098746464674</p>
-                        </div>
-                    </div>
-
-                </div>
+                <Pastor/>
             </div>
         </div>
         <Footer/>
